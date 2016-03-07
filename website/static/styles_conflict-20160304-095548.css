@@ -1,0 +1,126 @@
+body {
+  background-image: url(bg.jpg);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:20px;
+}
+
+#form_container {
+  width:300px;
+	height:448px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-224px 0 0 -150px;
+  padding:5px;
+  border-radius: 4px;
+}
+
+.form_elements{
+  padding:5px;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  width: 280px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  color: #5B5B5B;
+}
+
+#submit {
+  padding: 8px;
+  margin-top: 10px;
+  margin-right:20px;
+  float:right;
+  border: none;
+  background: rgb(36, 73, 110);
+  color:white;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 2px;
+}
+
+#login_form h2{
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+
+header {
+  background: #3D5166;
+  padding-bottom: 10px;
+}
+
+#login {
+  border:none;
+  padding:7px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 2px;
+  background: #3F8CD9;
+  color: white;
+}
+
+#register {
+  border:none;
+  padding:7px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 2px;
+  background: #57C157;
+  color: white;
+  margin-left: 10px;
+}
+
+.padding20 {
+  padding: 25px;
+}
+
+nav {
+  background: #3D5166;
+  padding: 10px 0 10px 0;
+}
+
+.nav_el {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 15px;
+}
+
+.nav_el:hover {
+  color: #A0A0A0;
+  text-decoration: none;
+}
+
+.txt_center {
+  text-align: center;
+}
+
+.row {
+  margin:0px;
+  padding-bottom: 20px;
+}
+
+.icon_h2 {
+  margin-top: 15px;
+}
+
+.nopadding {
+  padding:0;
+}
+
+.nomargin {
+  margin: 0px;
+}
+
+.cd-pricing-container {
+  color: #173d50;
+}
+
+.15per_left {
+  margin-left: 16%;
+}
