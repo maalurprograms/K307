@@ -1,1 +1,1 @@
-Design (HTML und CSS pages): John
+Design (HTML und CSS pages): maincolor: #33E8A6
