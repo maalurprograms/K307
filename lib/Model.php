@@ -49,6 +49,13 @@ class Model
         self::sendQuery($statement, false);
     }
 
+    public static function editNote($name, $content, $noteid){
+        $query = "update notes set content=?,name=? where noteID = ?";
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement->bind_param("ssi", $content,$name,$noteid);
+        self::sendQuery($statement, false);
+    }
+
     private static function sendQuery($statement, $needOutput){
         $statement->execute();
         $result = $statement->get_result();
@@ -56,8 +63,13 @@ class Model
 //            if (!$result) {
 //                throw new Exception($statement->error);
 //            }
-            return $result->fetch_assoc();
-            $result->close();
+            $rows = array();
+            $i=0;
+            while($row = $result->fetch_assoc()){
+                $rows[$i]=$row;
+                $i++;
+            }
+            return ;
         }
 
     }
