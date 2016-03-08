@@ -14,7 +14,7 @@ class Model
     }
 
     public static function addUser($username, $password){
-        $query = 'insert into users (username, passwort) VALUES (?, ?)';
+        $query = 'insert into users (username, password) VALUES (?, ?)';
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param("ss", $username,$password);
         self::sendQuery($statement, false);
@@ -52,12 +52,13 @@ class Model
     private static function sendQuery($statement, $needOutput){
         $statement->execute();
         $result = $statement->get_result();
-        if (!$result) {
-            throw new Exception($statement->error);
-        }
         if($needOutput) {
+//            if (!$result) {
+//                throw new Exception($statement->error);
+//            }
             return $result->fetch_assoc();
+            $result->close();
         }
-        $result->close();
+
     }
 }
