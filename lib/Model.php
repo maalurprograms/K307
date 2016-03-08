@@ -29,7 +29,7 @@ class Model
     }
 
     public static function getAllNotesFromUser($userid){
-        $query = "select noteID, name, date, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
+        $query = "select noteID, `name`, `date`, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param("i", $userid);
         return self::sendQuery($statement, true);
