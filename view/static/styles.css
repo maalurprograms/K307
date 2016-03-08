@@ -45,16 +45,26 @@ body {
 }
 
 #submit {
-  padding: 8px;
-  margin-top: 10px;
-  margin-right:20px;
-  float:right;
-  border: none;
-  background: rgb(36, 73, 110);
-  color:white;
-  font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
-  border-radius: 2px;
+    border:none;
+    padding: 8px;
+    margin-top: 10px;
+    margin-right:20px;
+    float:right;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    background: white;
+    color: black;
+    border-left: 5px solid white;
+}
+
+#submit:hover {
+    border-radius: 0px;
+    background:#3B945C;
+    color:white;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 #login_form h2{
@@ -75,17 +85,18 @@ header {
   background: white;
   color: black;
     border-left: 5px solid white;
+    border-radius: 2px;
 
 }
 
 #login:hover {
+    border-radius: 0px;
     background:#3B945C;
     color:white;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-}
 }
 
 #register {

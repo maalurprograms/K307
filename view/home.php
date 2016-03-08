@@ -3,7 +3,7 @@
 <head>
     <title>SwissNotes</title>
     <link rel="icon" type="image/png" href="view/static/images/favicon.png">
-    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="view/static/style.css"> <!-- Resource style -->
 
     <!-- custom -->
     <link rel="stylesheet" type="text/css" href="view/static/bootstrap.min.css">
@@ -17,8 +17,8 @@
         <div class="col-md-1"></div>
         <div class="col-md-7"><h1><b>SwissNotes</b></h1></div>
         <div class="col-md-3 padding20">
-            <a href="view/login.html"><button id="login">Log in</button></a>
-            <a href="view/register.html"><button id="register">Register</button></a>
+            <a href="login.html"><button id="login">Log in</button></a>
+            <a href="register.html"><button id="login">Register</button></a>
         </div>
         <div class="col-md-1"></div>
     </div>

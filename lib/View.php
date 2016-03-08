@@ -61,7 +61,7 @@ class View
 
     public function __construct($viewfile)
     {
-        $this->viewfile = "/view/$viewfile.php";
+        $this->viewfile = "view/$viewfile.php";
     }
 
     public function __set($key, $value)
@@ -81,9 +81,7 @@ class View
     public function display()
     {
         extract($this->properties);
-
-        require './view/header.php';
+        set_include_path(dirname(__FILE__)."/../");
         require $this->viewfile;
-        require './view/footer.php';
     }
 }
