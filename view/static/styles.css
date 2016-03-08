@@ -1,5 +1,6 @@
 body {
-  background-image: url(bg.jpg);
+  /* background-image: url(bg.jpg); */
+    background:#4FC47A;
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
@@ -62,16 +63,29 @@ body {
 }
 
 header {
-  background: #3D5166;
+  background: #3B945C;
+    margin-bottom:10px;
+    box-shadow: 2px 2px 5px #3B945C;
 }
 
 #login {
   border:none;
   padding:7px;
   font-family: 'Open Sans', sans-serif;
-  border-radius: 2px;
-  background: #3F8CD9;
-  color: white;
+  background: white;
+  color: black;
+    border-left: 5px solid white;
+
+}
+
+#login:hover {
+    background:#3B945C;
+    color:white;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
 }
 
 #register {
@@ -219,10 +233,11 @@ input.radio:checked ~ label {
     padding:10px;
     background:white;
     color:black;
+    border-left: 5px solid white;
 }
 
 .ac_nav_li li:hover {
-    background:#24BF90;
+    background:#4FC47A;
     color:white;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
