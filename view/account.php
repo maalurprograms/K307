@@ -27,16 +27,24 @@
     <div id="account_nav" class="col-md-2">
         <ul class="ac_nav_li">
             <li> + New Note</li>
+            <?php
+            foreach($this->notes as $note) {
+                print '
+            <li id="'.$note["noteID"].'>' . $note['name'] .'</li>';
+            }
+            ?>
         </ul>
     </div>
     <div id="note_container" class="col-md-6">
         <?php
         foreach($this->notes as $note) {
             print '
+            <div id="'.$note["noteID"].'" >
             <h2>' . $note['name'] .'</h2><p><i>' . $note['date'] . '</i></p>
             <textarea>' . $note['content'] . '
             </textarea>
-            <br>';
+            <br>
+            </div>';
         }
             ?>
             </div>
