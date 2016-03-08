@@ -24,10 +24,9 @@ class UserController
             $password = $_POST['password'];
 
             Model::addUser($username, $password);
-
-        } else{
             $view = new View("login");
             $view->display();
+        } else{
             print "Die passwörter stimmen nicht überein.";
         }
 
