@@ -9,7 +9,7 @@ class DefaultController
         $view->display();
     }
 
-    public function register(){
+    public function regitser(){
         $pdo = new PDO('mysql:host=localhost;dbname=swissnotes', 'root', '');
 
         $sql = 'select username from users where username = "'.$_POST["name"].'"';
