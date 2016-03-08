@@ -9,22 +9,29 @@ class DefaultController
         $view->display();
     }
 
-    public function regitser(){
-        $pdo = new PDO('mysql:host=localhost;dbname=swissnotes', 'root', '');
+    public function register(){
 
-        $sql = 'select username from users where username = "'.$_POST["name"].'"';
-        $result = $pdo->query($sql);
-        $count = count($result->fetchAll());
-        if($count > 0){
+        $view = new View("register");
+        $view->display();
+    }
+
+    public function login(){
+        $view = new View("login");
+        $view->display();
+    }
+
+    public function checkRegister(){
+        $result = Model::querySingle("SELECT username, password FROM users WHERE username = ".$_POST["username"]);
+        if($result){
             print "<h1>Diesen User gibt es schon</h1>";
         } else{
             if($_POST["password"] == $_POST["cpassword"]){
-                $sql = 'insert into users (username, passwort) VALUES ("'.$_POST["name"].'", "'.$_POST["password"].'")';
-                $pdo->query($sql);
+                Model::addUSer($_POST["username"], $_POST["password"]);
                 print "<h1>OK</h1>";
             } else{
                 print '<h1>Die Passwörter stimmen nicht überein</h1>';
             }
         }
     }
+
 }
