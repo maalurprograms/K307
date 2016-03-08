@@ -4,7 +4,7 @@ require_once 'ConnectionHandler.php';
 class Model
 {
 
-    public function getUser($username)
+    public static function getUser($username)
     {
         $query = "SELECT userID, username, password FROM users WHERE username = ?";
         $statement = ConnectionHandler::getConnection()->prepare($query);

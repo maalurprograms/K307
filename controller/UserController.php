@@ -50,15 +50,13 @@ class UserController
     {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $model = new Model();
-        $user = $model->getUser($username);
+        $user = Model::getUser($username);
         if ($user["password"] == $password)
         {
             // Start session and redirect to account
-            $model = new Model();
             $view = new View('account');
-            $view->userData = $model->getUser($username);
-            $view->notes = $model->getAllNotesFromUser($view->userData["userID"]);
+            $view->userData = Model::getUser($username);
+            $view->notes = Model::getAllNotesFromUser($view->userData["userID"]);
             $view->display();
         }
         else
