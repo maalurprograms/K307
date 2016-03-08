@@ -22,8 +22,7 @@ class UserController
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            $model = new Model();
-            $model->addUser($username, $password);
+            Model::addUser($username, $password);
         }
 
         // Anfrage an die URI /user weiterleiten (HTTP 302)
@@ -42,7 +41,6 @@ class UserController
     {
         $username = $_POST['username'];
         $password = $_POST['password'];
-
         $model = new Model();
         $user = $model->getUser($username);
         if ($user["password"] == $password)
@@ -50,7 +48,7 @@ class UserController
             // Start session and redirect to account
             $model = new Model();
             $view = new View('account');
-            $view->userData = $model->getUser();
+            $view->userData = $model->getUser($username);
             $view->display();
         }
         else

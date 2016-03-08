@@ -14,7 +14,7 @@
 <header>
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-7"><h1 style="padding:0px">SwissNotes - Hello, User1</h1></div>
+        <div class="col-md-7"><h1 style="padding:0px">SwissNotes - Hello, <?php print $this->userData["username"]?></h1></div>
         <div class="col-md-1 padding20">
             <a href=""><button id="login">Log out</button></a>
         </div>
