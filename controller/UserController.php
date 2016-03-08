@@ -32,8 +32,7 @@ class UserController
 
     public function delete()
     {
-        $model = new Model();
-        $model->deleteUser($_GET['username']);
+        Model::deleteUser($_GET['username']);
 
         // Anfrage an die URI /user weiterleiten (HTTP 302)
         // header('Location: /user');

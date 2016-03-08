@@ -1,5 +1,4 @@
 <?php
-
 require_once 'ConnectionHandler.php';
 
 class Model
@@ -8,12 +7,8 @@ class Model
     public static function getUser($username)
     {
         $query = "SELECT userID, username, password FROM users WHERE username = ?";
-        $rows = self::sendQuery($query, true, true, array("s", $username));
-        if(count($rows) > 0) {
-            return $rows;
-        }else {
-            return false;
-        }
+        return self::sendQuery($query, true, true, array("s", $username));
+
     }
 
     public static function addUser($username, $password){
@@ -29,12 +24,7 @@ class Model
 
     public static function getAllNotesFromUser($userid){
         $query = "select name, date, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
-        $rows = self::sendQuery($query, true, true, array("i", $userid));
-        if(count($rows) > 0) {
-            return $rows;
-        }else {
-            return false;
-        }
+        return self::sendQuery($query, true, true, array("i", $userid));
     }
 
     public static function addNote($name, $date, $content, $userid){
