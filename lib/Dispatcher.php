@@ -32,16 +32,10 @@ class Dispatcher
         //   Einzelteile zerlegt.
         // /user/index/foo --> ['user', 'index', 'foo']
         $uri = $_SERVER['REQUEST_URI'];
-        echo $uri . "<br>";
         $uri = strtok($uri, '?'); // Erstes ? und alles danach abschneiden
-        echo $uri . "<br>";
         $uri = trim($uri, '/'); // Alle / am anfang und am Ende der URI abschneiden
-        echo $uri . "<br>";
         $uriFragments = explode('/', $uri); // In einzelteile zerlegen
-
-        echo $uriFragments[0];
-        echo $uriFragments[1];
-        echo $uriFragments[2];
+        
         // Den Namen des gewünschten Controllers ermitteln
         $controllerName = 'DefaultController2';
         if ($uriFragments[0] == "-K307") {

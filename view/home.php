@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>SwissNotes</title>
+    <base href="/-K307/">
     <link rel="icon" type="image/png" href="view/static/images/favicon.png">
     <link rel="stylesheet" href="view/static/style.css"> <!-- Resource style -->
 

@@ -5,4 +5,7 @@ Design (HTML und CSS pages): maincolor: #33E8A6
 - Frontend fertig erstellen
 - Controllers erstellen
 - MVC implementieren
--
+
+#NOTES
+
+- In die head jeder view php Datei, "<base href="/-K307/">" nach "<base href="/">" ändern nach entwicklung
