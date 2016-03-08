@@ -5,7 +5,7 @@ return array(
     'database' => array(
         'host' => 'localhost',
         'username' => 'swissnotes', //
-        'password' => '',
+        'password' => 'swissnotes',
         'database' => 'swissnotes',
     ),
 
