@@ -10,7 +10,7 @@
   <div id="register_container">
   <img id="icon" src="view/static/images/register.png" />
     <h2>Register</h2>
-    <form id="register_form">
+    <form id="register_form" action="">
       <label for="username">Userame </label><br>
       <input id="username" class="form_elements" type="text" name="name" required/><br>
       <label for="password">Password </label><br>

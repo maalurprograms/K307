@@ -1,30 +1,41 @@
 <?php
-
 class DefaultController
 {
-
+    /**
+     * Die index Funktion des DefaultControllers sollte in jedem Projekt
+     * existieren, da diese ausgeführt wird, falls die URI des Requests leer
+     * ist. (z.B. http://mvc.local/). Weshalb das so ist, ist und wann welchr
+     * Controller und welche Methode aufgerufen wird, ist im Dispatcher
+     * beschrieben.
+     */
     public function home()
     {
+        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
+        //   "default_index" rendern. Wie das genau funktioniert, ist in der
+        //   View Klasse beschrieben.
         $view = new View('home');
         $view->display();
     }
 
-    public function regitser(){
-        $pdo = new PDO('mysql:host=localhost;dbname=swissnotes', 'root', '');
+    public function login()
+    {
+        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
+        //   "default_index" rendern. Wie das genau funktioniert, ist in der
+        //   View Klasse beschrieben.
+        $view = new View('login');
+        $view->display();
+    }
 
-        $sql = 'select username from users where username = "'.$_POST["name"].'"';
-        $result = $pdo->query($sql);
-        $count = count($result->fetchAll());
-        if($count > 0){
-            print "<h1>Diesen User gibt es schon</h1>";
-        } else{
-            if($_POST["password"] == $_POST["cpassword"]){
-                $sql = 'insert into users (username, passwort) VALUES ("'.$_POST["name"].'", "'.$_POST["password"].'")';
-                $pdo->query($sql);
-                print "<h1>OK</h1>";
-            } else{
-                print '<h1>Die Passwörter stimmen nicht überein</h1>';
-            }
-        }
+    public function register()
+    {
+        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
+        //   "default_index" rendern. Wie das genau funktioniert, ist in der
+        //   View Klasse beschrieben.
+        $view = new View('register');
+        $view->display();
     }
 }
+
+
+
+

@@ -5,13 +5,20 @@ require_once 'ConnectionHandler.php';
 class Model
 {
 
-    public static function querySingle($query)
+    public static function getUser($username)
     {
-        return self::sendQuery($query, true);
+        $query = "SELECT userID, username, password FROM users WHERE username = ".$username;
+        $rows = self::sendQuery($query, true);
+        if(count($rows) > 0) {
+            return $rows;
+        }else {
+            return false;
+        }
     }
 
-    public static function addUSer($username, $password){
-        $query = 'insert into users (username, passwort) VALUES ("'.$username.'", "'.$password.'"';
+    public static function addUser($username, $password){
+        $query = 'insert into users (username, passwort) VALUES ("'.$username.'", "'.$password.'")';
+        self::sendQuery($query, false);
     }
 
     public static function deleteUser($username)
@@ -20,8 +27,23 @@ class Model
         self::sendQuery($query, false);
     }
 
+    public static function getAllNotesFromUser($userid){
+        $query = "select name, date, content from notes inner join users on users.userID=notes.IDuser where userID = ".$userid;
+        $rows = self::sendQuery($query, true);
+        if(count($rows) > 0) {
+            return $rows;
+        }else {
+            return false;
+        }
+    }
+
+    public static function addNote($name, $date, $content, $userid){
+        $query = 'insert into notes (name, date, content, IDuser) VALUES ("'.$name.'", "'.$date.'", "'.$content.'", "'.$userid.'")';
+        self::sendQuery($query, false);
+    }
+
     public static function deleteNote($id){
-        $query = "DELETE FROM notes WHERE noteID = ?";
+        $query = "DELETE FROM notes WHERE noteID = ".$id;
         self::sendQuery($query, false);
     }
 
@@ -33,11 +55,8 @@ class Model
             throw new Exception($statement->error);
         }
         if($needOutput) {
-            $row = $result->fetch();
-            $result->close();
-            return $row;
-        }else{
-            $result->close();
+            return $result->fetch_assoc();
         }
+        $result->close();
     }
 }
