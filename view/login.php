@@ -10,7 +10,7 @@
   <div id="form_container">
   <img id="icon" src="view/static/images/icon.png" />
     <h2>Log In</h2>
-    <form id="login_form">
+    <form id="login_form" action="user/login" method="post">
       <label for="username">Username </label><br>
       <input id="username" class="form_elements" type="text" name="username" required/><br>
       <label for="password">Password </label><br>
