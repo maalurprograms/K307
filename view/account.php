@@ -12,6 +12,7 @@
 </head>
 <body>
 <header>
+    <?php print $this->notes[1]["content"]?>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7"><h1 style="padding:0px">SwissNotes - Hello, <?php print $this->userData["username"]?></h1></div>
@@ -30,7 +31,6 @@
     </div>
     <div id="note_container" class="col-md-6">
         <textarea>
-skdjflksdjflökj
         </textarea>
     </div>
     <div class="col-md-2"></div>

@@ -9,7 +9,7 @@ class Model
         $query = "SELECT userID, username, password FROM users WHERE username = ?";
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param("s", $username);
-        return self::sendQuery($statement, true);
+        return self::sendQuery($statement, true)[0];
 
     }
 

@@ -54,6 +54,7 @@ class UserController
             $model = new Model();
             $view = new View('account');
             $view->userData = $model->getUser($username);
+            $view->notes = $model->getAllNotesFromUser($view->userData["userID"]);
             $view->display();
         }
         else
