@@ -69,7 +69,7 @@ class Model
                 $rows[$i]=$row;
                 $i++;
             }
-            return ;
+            return $rows;
         }
 
     }
