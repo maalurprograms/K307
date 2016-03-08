@@ -201,3 +201,32 @@ input.radio:checked ~ label:before {
 input.radio:checked ~ label {
 }
 /* END RADIO BUTTON STYLE */
+
+#account_nav {
+    height:100px;
+}
+
+.ac_nav_li {
+    decoration:none;
+    list-style-type: none;
+    width:100%;
+    padding:0px;
+    font-weight: bold;
+}
+
+.ac_nav_li li {
+    decoration:none;
+    width:100%;
+    padding:10px;
+    background:white;
+    color:black;
+}
+
+.ac_nav_li li:hover {
+    background:#24BF90;
+    color:white;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
