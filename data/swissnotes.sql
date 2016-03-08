@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 07. Mrz 2016 um 15:12
+-- Erstellungszeit: 08. Mrz 2016 um 16:11
 -- Server-Version: 10.1.10-MariaDB
 -- PHP-Version: 5.6.15
 
@@ -43,8 +43,16 @@ CREATE TABLE `notes` (
 CREATE TABLE `users` (
   `userID` int(11) NOT NULL,
   `username` text NOT NULL,
-  `passwort` text NOT NULL
+  `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `users`
+--
+
+INSERT INTO `users` (`userID`, `username`, `password`) VALUES
+(1, 'admin', 'admin'),
+(2, 'jonas', 'jonas'),
 
 --
 -- Indizes der exportierten Tabellen
@@ -76,7 +84,7 @@ ALTER TABLE `notes`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
