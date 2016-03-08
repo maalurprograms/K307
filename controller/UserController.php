@@ -20,12 +20,16 @@ class UserController
     public function register()
     {
         if ( $_POST['password']==$_POST['cpassword']) {
-            $username = $_POST['name'];
-            $password = $_POST['password'];
+            if(!(count(Model::getUser($_POST["name"]))> 0)) {
+                $username = $_POST['name'];
+                $password = $_POST['password'];
 
-            Model::addUser($username, $password);
-            $view = new View("login");
-            $view->display();
+                Model::addUser($username, $password);
+                $view = new View("login");
+                $view->display();
+            } else{
+                print "Diesen user gibt es schon.";
+            }
         } else{
             print "Die passwörter stimmen nicht überein.";
         }
