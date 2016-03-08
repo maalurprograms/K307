@@ -45,7 +45,7 @@ class Dispatcher
         }
 
         // Den Namen der auszuführenden Methode ermitteln
-        $method = 'index';
+        $method = 'home';
         if (!empty($uriFragments[1])) {
             $method = $uriFragments[1];
         }
