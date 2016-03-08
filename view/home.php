@@ -13,6 +13,9 @@
 </head>
 <body>
 <header>
+    <?php
+        echo $this->userData;
+    ?>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-7"><h1><b>SwissNotes</b></h1></div>
