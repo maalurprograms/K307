@@ -7,8 +7,8 @@ class Model
 
     public static function getUser($username)
     {
-        $query = "SELECT userID, username, password FROM users WHERE username = ".$username;
-        $rows = self::sendQuery($query, true);
+        $query = "SELECT userID, username, password FROM users WHERE username = ?";
+        $rows = self::sendQuery($query, true, true, array("s", $username));
         if(count($rows) > 0) {
             return $rows;
         }else {
@@ -17,19 +17,19 @@ class Model
     }
 
     public static function addUser($username, $password){
-        $query = 'insert into users (username, passwort) VALUES ("'.$username.'", "'.$password.'")';
-        self::sendQuery($query, false);
+        $query = 'insert into users (username, passwort) VALUES (?, ?)';
+        self::sendQuery($query, false, true, array("ss", array($username, $password)));
     }
 
     public static function deleteUser($username)
     {
-        $query = "DELETE FROM users WHERE username = ".$username;
-        self::sendQuery($query, false);
+        $query = "DELETE FROM users WHERE username = ?";
+        self::sendQuery($query, false, true, array("s", $username));
     }
 
     public static function getAllNotesFromUser($userid){
-        $query = "select name, date, content from notes inner join users on users.userID=notes.IDuser where userID = ".$userid;
-        $rows = self::sendQuery($query, true);
+        $query = "select name, date, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
+        $rows = self::sendQuery($query, true, true, array("i", $userid));
         if(count($rows) > 0) {
             return $rows;
         }else {
@@ -38,17 +38,20 @@ class Model
     }
 
     public static function addNote($name, $date, $content, $userid){
-        $query = 'insert into notes (name, date, content, IDuser) VALUES ("'.$name.'", "'.$date.'", "'.$content.'", "'.$userid.'")';
-        self::sendQuery($query, false);
+        $query = 'insert into notes (name, date, content, IDuser) VALUES (?, ?, ?, ?)';
+        self::sendQuery($query, false, true, array("sssi", array($name, $date, $content, $userid)));
     }
 
     public static function deleteNote($id){
-        $query = "DELETE FROM notes WHERE noteID = ".$id;
-        self::sendQuery($query, false);
+        $query = "DELETE FROM notes WHERE noteID = ?";
+        self::sendQuery($query, false, true, array("i",$id));
     }
 
-    private static function sendQuery($query, $needOutput){
+    private static function sendQuery($query, $needOutput, $bindParam, $paramlist=null){
         $statement = ConnectionHandler::getConnection()->prepare($query);
+        if($bindParam){
+            $statement->bind_param($paramlist[0], $paramlist[1]);
+        }
         $statement->execute();
         $result = $statement->get_result();
         if (!$result) {
