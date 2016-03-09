@@ -7,8 +7,9 @@ class Model
     public static function getUser($username)
     {
         $query = "SELECT userID, username, password FROM users WHERE username = ?";
-        $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param("s", $username);
+        $mysqli = ConnectionHandler::getConnection();
+        $statement = $mysqli->prepare($query);
+        $statement->bind_param("s", $mysqli->escape_string($username));
         return self::sendQuery($statement, true)[0];
 
     }

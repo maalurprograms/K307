@@ -51,7 +51,7 @@ class UserController
         $username = $_POST['username'];
         $password = $_POST['password'];
         $user = Model::getUser($username);
-        if ($user["password"] == $password)
+        if ($user["password"] == $password && $password != "")
         {
             // Start session and redirect to account
             $view = new View('account');
