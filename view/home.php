@@ -8,7 +8,7 @@
     <!-- custom -->
     <link rel="stylesheet" type="text/css" href="view/static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="view/static/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>

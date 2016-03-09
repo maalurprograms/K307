@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="view/static/bootstrap.min.css">
     <link rel="icon" type="image/png" href="view/static/images/favicon.png">
     <link rel="stylesheet" type="text/css" href="view/static/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>$
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
     <script src="view/account.js"></script>
@@ -16,12 +16,12 @@
     <?php
     if(!isset($_SESSION)){
         session_start();
+        $_SESSION["userID"] = $this->userData;
     }
-    $_SESSION["userID"] = $this->userData["userID"];
     ?>
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-7"><h1 style="padding:0px">SwissNotes - Hello, <?php print $this->userData["username"]?></h1></div>
+        <div class="col-md-7"><h1 style="padding:0px">SwissNotes</h1></div>
         <div class="col-md-1 padding20">
             <a href=""><button id="login">Log out</button></a>
         </div>
@@ -54,10 +54,10 @@
         foreach($this->notes as $note) {
             print '
             <div id="'.$note["noteID"].'">
-                <form action="note/save" method="post">
+                <form action="note/edit" method="post">
+                    <input name="noteID" value="'.$note["noteID"].'" style="display:none;"/>
                     <input id="note_title" name="note_title" class="note_title" type="text" value="'.$note['name'].'" required/>
-                    <p><i>' . $note['date'] . '</i></p>
-                    <textarea style="height:500px;">' . $note['content'] . '
+                    <textarea name="note_content" style="height:500px;">' . $note['content'] . '
                     </textarea>
                     <input id="submit" type="submit" value="Save">
                 </form>

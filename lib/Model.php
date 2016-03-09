@@ -4,12 +4,20 @@ require_once 'ConnectionHandler.php';
 class Model
 {
 
-    public static function getUser($username)
-    {
-        $query = "SELECT userID, username, password FROM users WHERE username = ?";
+    public static function  getUserID($username){
+        $query = "SELECT userID FROM users WHERE username = ?";
         $mysqli = ConnectionHandler::getConnection();
         $statement = $mysqli->prepare($query);
         $statement->bind_param("s", $mysqli->escape_string($username));
+        return self::sendQuery($statement, true)[0]["userID"];
+    }
+
+    public static function getUser($userid)
+    {
+        $query = "SELECT username, password FROM users WHERE userID = ?";
+        $mysqli = ConnectionHandler::getConnection();
+        $statement = $mysqli->prepare($query);
+        $statement->bind_param("i", $userid);
         return self::sendQuery($statement, true)[0];
 
     }
@@ -30,16 +38,16 @@ class Model
     }
 
     public static function getAllNotesFromUser($userid){
-        $query = "select noteID, `name`, `date`, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
+        $query = "select noteID, `name`, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param("i", $userid);
         return self::sendQuery($statement, true);
     }
 
-    public static function addNote($name, $date, $content, $userid){
-        $query = 'insert into notes (name, date, content, IDuser) VALUES (?, ?, ?, ?)';
+    public static function addNote($name, $content, $userid){
+        $query = 'insert into notes (name, content, IDuser) VALUES (?, ?, ?)';
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param("sssi", $name,$date, $content, $userid);
+        $statement->bind_param("ssi", $name, $content, $userid);
         self::sendQuery($statement, false);
     }
 

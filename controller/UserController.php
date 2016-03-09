@@ -7,20 +7,11 @@ require_once 'lib/Model.php';
  */
 class UserController
 {
-    public function account()
-    {
-        $model = new Model();
-
-        $view = new View('home');
-        $view->userData = $model->getUser();  /* should return username, articles, etc. */
-        $view->display();
-    }
-
 
     public function register()
     {
         if ( $_POST['password']==$_POST['cpassword']) {
-            if(!(count(Model::getUser($_POST["name"]))> 0)) {
+            if(!(count(Model::getUser(Model::getUserID($_POST["name"])))> 0)) {
                 $username = $_POST['name'];
                 $password = $_POST['password'];
 
@@ -50,13 +41,13 @@ class UserController
     {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $user = Model::getUser($username);
+        $user = Model::getUser(Model::getUserID($username));
         if ($user["password"] == $password && $password != "")
         {
             // Start session and redirect to account
             $view = new View('account');
-            $view->userData = Model::getUser($username);
-            $view->notes = Model::getAllNotesFromUser($view->userData["userID"]);
+            $view->userData = Model::getUserID($username);
+            $view->notes = Model::getAllNotesFromUser(Model::getUserID($username));
             $view->display();
         }
         else

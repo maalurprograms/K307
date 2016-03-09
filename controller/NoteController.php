@@ -12,6 +12,21 @@ class NoteController
         session_start();
         $name = $_POST["note_title"];
         $content = $_POST["note_content"];
-        Model::addNote($name, getdate(), $content, $_SESSION["userID"]);
+        Model::addNote($name, $content, $_SESSION["userID"]);
+        $view = new View('account');
+        $view->userData = $_SESSION["userID"];
+        $view->notes = Model::getAllNotesFromUser($view->userData);
+        $view->display();
+    }
+
+    public function edit(){
+        session_start();
+        $name = $_POST["note_title"];
+        $content = $_POST["note_content"];
+        Model::editNote($name, $content,    $_POST["noteID"]);
+        $view = new View('account');
+        $view->userData = $_SESSION["userID"];
+        $view->notes = Model::getAllNotesFromUser($view->userData);
+        $view->display();
     }
 }
