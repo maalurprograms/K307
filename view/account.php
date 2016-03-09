@@ -12,7 +12,6 @@
 </head>
 <body>
 <header>
-    <?php print $this->notes[1]["name"]?>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7"><h1 style="padding:0px">SwissNotes - Hello, <?php print $this->userData["username"]?></h1></div>

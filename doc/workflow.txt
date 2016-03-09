@@ -3,8 +3,11 @@ Design (HTML und CSS pages): maincolor: #33E8A6
 #TODO
 
 - Frontend fertig erstellen
-- Controllers erstellen
-- MVC implementieren
+X Controllers erstellen
+X MVC implementieren
+- Bug (mit der Fehlermeldung fixen)
+- Sessions
+- Passwort verschlüsseln
 
 #NOTES
 
