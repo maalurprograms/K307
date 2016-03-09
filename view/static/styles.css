@@ -296,3 +296,21 @@ input.radio:checked ~ label {
 #tinymce .mceContentBody p {
     font-family: 'Architects Daughter', cursive;
 }
+
+#error_container{
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-150px 0 0 -150px;
+    text-align: center;
+    font-size:20px;
+}
+
+#error_icon {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:30px;
+}

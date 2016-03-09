@@ -22,18 +22,12 @@
         <div class="col-md-1"></div>
     </div>
 </header>
-<div class="row fixed">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="col-md-2 nopadding">
-                <h2 class="txt_center">About</h2>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-        <p>Beschreibung Hier</p>
-    </div>
-    <div class="col-md-2"></div>
+
+<div id="error_container">
+    <img id="error_icon" src="view/static/images/error.png" />
+    <?php
+    print $this->errorMsg;
+    ?>
 </div>
 </body>
-</html>
+

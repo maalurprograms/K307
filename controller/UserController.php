@@ -24,7 +24,9 @@ class UserController
                 print "Diesen user gibt es schon.";
             }
         } else{
-            print "Die passwörter stimmen nicht überein.";
+            $view = new View('error');
+            $view->errorMsg = "Die Passwérter stimmen nicht èberein.";
+            $view->display();
         }
 
         // Anfrage an die URI /user weiterleiten (HTTP 302)
@@ -50,12 +52,21 @@ class UserController
             // Start session and redirect to account
             $_SESSION["userID"] = Model::getUserID($username);
             $_SESSION["notes"] = Model::getAllNotesFromUser(Model::getUserID($username));
-            $view = new View('account');
-            $view->display();
+            header("Location: ../note/home");
         }
         else
         {
-            print "FALSCH!!!!!!!!!!!";
+            $view = new View('error');
+            $view->errorMsg = "Sie haben entweder den Usernamen oder das Passwort falsch eingegeben.";
+            $view->display();
         }
+    }
+
+    public function logout(){
+        session_start();
+        session_destroy();
+        unset($_SESSION["userID"]);
+        $view = new View('home');
+        $view->display();
     }
 }

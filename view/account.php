@@ -17,7 +17,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-7"><h1 style="padding:0px">SwissNotes</h1></div>
         <div class="col-md-1 padding20">
-            <a href=""><button id="login">Log out</button></a>
+            <a href="user/logout"><button id="login">Log out</button></a>
         </div>
         <div class="col-md-2"></div>
     </div>
@@ -25,6 +25,13 @@
 <div class="row">
     <div class="col-md-2"></div>
     <div id="account_nav" class="col-md-2">
+        <?php
+
+        if(!isset($_SESSION["userID"])){
+            print "Keine session du huere hacker";
+        }
+
+        ?>
         <ul class="ac_nav_li">
             <li id="0"> + New Note</li>
             <?php

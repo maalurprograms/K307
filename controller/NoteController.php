@@ -23,4 +23,16 @@ class NoteController
         $view = new View('account');
         $view->display();
     }
+
+    public  function home(){
+        session_start();
+        if(!isset($_SESSION["userID"])){
+            $view = new View("error");
+            $view->errorMsg = "Sie sind nicht angemeldet";
+            $view->display();
+        } else{
+            $view = new View("account");
+            $view->display();
+        }
+    }
 }
