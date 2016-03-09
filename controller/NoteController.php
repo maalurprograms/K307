@@ -10,23 +10,17 @@ class NoteController
 {
     public function save(){
         session_start();
-        $name = $_POST["note_title"];
-        $content = $_POST["note_content"];
-        Model::addNote($name, $content, $_SESSION["userID"]);
+        Model::addNote($_POST["note_title"], $_POST["note_content"], $_SESSION["userID"]);
+        $_SESSION["notes"] = Model::getAllNotesFromUser($_SESSION["userID"]);
         $view = new View('account');
-        $view->userData = $_SESSION["userID"];
-        $view->notes = Model::getAllNotesFromUser($view->userData);
         $view->display();
     }
 
     public function edit(){
         session_start();
-        $name = $_POST["note_title"];
-        $content = $_POST["note_content"];
-        Model::editNote($name, $content,    $_POST["noteID"]);
+        Model::editNote($_POST["note_title"], $_POST["note_content"], $_POST["noteID"]);
+        $_SESSION["notes"] = Model::getAllNotesFromUser($_SESSION["userID"]);
         $view = new View('account');
-        $view->userData = $_SESSION["userID"];
-        $view->notes = Model::getAllNotesFromUser($view->userData);
         $view->display();
     }
 }
