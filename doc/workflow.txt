@@ -8,8 +8,7 @@ X MVC implementieren
 X Bug (mit der Fehlermeldung fixen)
 X Sessions
 - Passwort verschlüsseln
-- Benutzer löschen
-- Notiz löschen
+x Notiz löschen
 - Doku fertig erstellen
 - Presentation vorbereiten
 - Swissnotes Testen

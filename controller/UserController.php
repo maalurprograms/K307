@@ -33,13 +33,13 @@ class UserController
         // header('Location: /user');
     }
 
-    public function delete()
-    {
-        Model::deleteUser($_GET['username']);
-
-        // Anfrage an die URI /user weiterleiten (HTTP 302)
-        // header('Location: /user');
-    }
+//    public function delete()
+//    {
+//        Model::deleteUser($_GET['username']);
+//
+//        // Anfrage an die URI /user weiterleiten (HTTP 302)
+//        // header('Location: /user');
+//    }
 
     public function login()
     {

@@ -29,13 +29,13 @@ class Model
         self::sendQuery($statement, false);
     }
 
-    public static function deleteUser($username)
-    {
-        $query = "DELETE FROM users WHERE username = ?";
-        $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param("s", $username);
-        self::sendQuery($statement, false);
-    }
+//    public static function deleteUser($username)
+//    {
+//        $query = "DELETE FROM users WHERE username = ?";
+//        $statement = ConnectionHandler::getConnection()->prepare($query);
+//        $statement->bind_param("s", $username);
+//        self::sendQuery($statement, false);
+//    }
 
     public static function getAllNotesFromUser($userid){
         $query = "select noteID, `name`, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
