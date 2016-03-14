@@ -17,7 +17,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-7"><h1 style="padding:0px">SwissNotes</h1></div>
         <div class="col-md-1 padding20">
-            <a href="user/logout"><button class="login">Log out</button></a>
+            <a href="user/logout"><button class="login">Abmelden</button></a>
         </div>
         <div class="col-md-2"></div>
     </div>
@@ -26,7 +26,7 @@
     <div class="col-md-2"></div>
     <div id="account_nav" class="col-md-2">
         <ul class="ac_nav_li">
-            <li id="0"> + New Note</li>
+            <li id="0"> + Neue Notiz</li>
             <?php
             foreach($_SESSION["notes"] as $note) {
                 print '<li id="'.$note["noteID"].'">' . $note['name'] .'</li>';
