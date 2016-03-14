@@ -38,7 +38,7 @@
         <div id="0">
             <h2>Neue Notiz erstellen</h2>
             <form action="note/save" method="post">
-                <input id="note_title" name="note_title" class="note_title" type="text" placeholder="Title" required/>
+                <input id="note_title" name="note_title" class="note_title" type="text" placeholder="Titel" required/>
                 <textarea id="note_content" name="note_content" class="txtareasize"></textarea>
                 <input id="submit" style="margin-right:0px;" type="submit" value="Speichern">
             </form>
