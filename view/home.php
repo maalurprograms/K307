@@ -14,8 +14,8 @@
 <header>
     <div class="row">
         <div class="col-md-1"></div>
-        <div class="col-md-7"><h1><b>SwissNotes</b></h1></div>
-        <div class="col-md-3 padding20">
+        <div class="col-md-8"><h1><b>SwissNotes</b></h1></div>
+        <div class="col-md-2 padding20">
             <a href="default/login"><button id="login">Log in</button></a>
             <a href="default/register"><button id="login">Register</button></a>
         </div>
@@ -24,7 +24,7 @@
 </header>
 <div class="row fixed">
     <div class="col-md-2"></div>
-    <div class="col-md-6">
+    <div class="col-md-8">
         <div class="row">
             <div class="col-md-12 nopadding">
                 <h2 class="txt_center">SwissNotes erklärt</h2>
