@@ -115,7 +115,12 @@ header {
     box-shadow: 2px 2px 5px #3B945C;
 }
 
-#login {
+#get_startet:hover{
+    background: #4FC47A;
+    color: white;
+}
+
+.login {
   border:none;
   padding:7px;
     font-family: 'Ubuntu', sans-serif;
@@ -126,7 +131,7 @@ header {
 
 }
 
-#login:hover {
+.login:hover {
     border-radius: 0px;
     background:#3B945C;
     color:white;

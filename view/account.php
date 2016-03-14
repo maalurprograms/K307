@@ -17,7 +17,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-7"><h1 style="padding:0px">SwissNotes</h1></div>
         <div class="col-md-1 padding20">
-            <a href="user/logout"><button id="login">Log out</button></a>
+            <a href="user/logout"><button class="login">Log out</button></a>
         </div>
         <div class="col-md-2"></div>
     </div>

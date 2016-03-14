@@ -16,8 +16,8 @@
         <div class="col-md-1"></div>
         <div class="col-md-8"><h1><b>SwissNotes</b></h1></div>
         <div class="col-md-2 padding20">
-            <a href="default/login"><button id="login">Log in</button></a>
-            <a href="default/register"><button id="login">Register</button></a>
+            <a href="default/login"><button class="login">Log in</button></a>
+            <a href="default/register"><button class="login">Register</button></a>
         </div>
         <div class="col-md-1"></div>
     </div>
@@ -40,7 +40,7 @@
         <div class="row">
             <div class="col-md-3 nopadding"></div>
             <div class="col-md-6 nopadding">
-                <a href="default/register"><h2 id="login" class="margin50 txt_center">Jetzt Starten!</h2></a>
+                <a href="default/register"><h2 id="get_startet" class="margin50 txt_center login">Jetzt Starten!</h2></a>
             </div>
             <div class="col-md-3 nopadding"></div>
         </div>
