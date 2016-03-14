@@ -9,7 +9,10 @@ class Model
         $mysqli = ConnectionHandler::getConnection();
         $statement = $mysqli->prepare($query);
         $statement->bind_param("s", $mysqli->escape_string($username));
-        return self::sendQuery($statement, true)[0]["userID"];
+        $data = self::sendQuery($statement, true);
+        if($data) {
+            return self::sendQuery($statement, true)[0]["userID"];
+        }
     }
 
     public static function getUser($userid)
@@ -18,8 +21,10 @@ class Model
         $mysqli = ConnectionHandler::getConnection();
         $statement = $mysqli->prepare($query);
         $statement->bind_param("i", $userid);
-        return self::sendQuery($statement, true)[0];
-
+        $data = self::sendQuery($statement, true);
+        if($data) {
+            return self::sendQuery($statement, true)[0];
+        }
     }
 
     public static function addUser($username, $password){
