@@ -7,7 +7,7 @@ X Controllers erstellen
 X MVC implementieren
 X Bug (mit der Fehlermeldung fixen)
 X Sessions
-- Passwort verschlüsseln
+X Passwort verschlüsseln
 x Notiz löschen
 - Doku fertig erstellen
 - Presentation vorbereiten

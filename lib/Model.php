@@ -4,6 +4,12 @@ require_once 'ConnectionHandler.php';
 class Model
 {
 
+    /*
+     * Queries the DB and fetches the user ID of a specified user.
+     *
+     * @param string $username - String containing a username
+     * @return int - Table ID for specified user
+     */
     public static function  getUserID($username){
         $query = "SELECT userID FROM users WHERE username = ?";
         $mysqli = ConnectionHandler::getConnection();
@@ -13,8 +19,17 @@ class Model
         if($data) {
             return self::sendQuery($statement, true)[0]["userID"];
         }
+        else {
+            return Null;
+        }
     }
 
+    /*
+     * Fetches all user data for a specific user as specified by the provided user ID
+     *
+     * @param int $userid - ID of a user
+     * @return array - Array of all parameters of a specific usr from the table users
+     */
     public static function getUser($userid)
     {
         $query = "SELECT username, password FROM users WHERE userID = ?";
@@ -27,6 +42,12 @@ class Model
         }
     }
 
+    /*
+     * Inserts a new user into the database
+     *
+     * @param string $username - Username of a new user
+     * @param string $password - Password of a new user
+     */
     public static function addUser($username, $password){
         $query = 'insert into users (username, password) VALUES (?, ?)';
         $statement = ConnectionHandler::getConnection()->prepare($query);
@@ -34,14 +55,12 @@ class Model
         self::sendQuery($statement, false);
     }
 
-//    public static function deleteUser($username)
-//    {
-//        $query = "DELETE FROM users WHERE username = ?";
-//        $statement = ConnectionHandler::getConnection()->prepare($query);
-//        $statement->bind_param("s", $username);
-//        self::sendQuery($statement, false);
-//    }
-
+    /*
+     * Queries the DB and fetches all notes pertaining to a specific user as specified by the given user ID
+     *
+     * @param int $userid - User id of a specific user
+     * @return array - List of notes
+     */
     public static function getAllNotesFromUser($userid){
         $query = "select noteID, `name`, content from notes inner join users on users.userID=notes.IDuser where userID = ?";
         $statement = ConnectionHandler::getConnection()->prepare($query);
@@ -49,6 +68,13 @@ class Model
         return self::sendQuery($statement, true);
     }
 
+    /*
+     * Inserts a new note into the database
+     *
+     * @param string $name - note title
+     * @param string $content - Note content
+     * @param int $userid - ID of this notes owner
+     */
     public static function addNote($name, $content, $userid){
         $query = 'insert into notes (name, content, IDuser) VALUES (?, ?, ?)';
         $statement = ConnectionHandler::getConnection()->prepare($query);
@@ -56,6 +82,11 @@ class Model
         self::sendQuery($statement, false);
     }
 
+    /*
+     * Deletes a note with the provided ID from the database
+     *
+     * @param int $id - Note id
+     */
     public static function deleteNote($id){
         $query = "DELETE FROM notes WHERE noteID = ?";
         $statement = ConnectionHandler::getConnection()->prepare($query);
@@ -63,6 +94,13 @@ class Model
         self::sendQuery($statement, false);
     }
 
+    /*
+     * Updates a specific note with the given note ID in the DB with the given name & content
+     *
+     * @param string $name - Note title
+     * @param string $content - Note content
+     * @param int $noteid - Note ID
+     */
     public static function editNote($name, $content, $noteid){
         $query = "update notes set content=?,name=? where noteID = ?";
         $statement = ConnectionHandler::getConnection()->prepare($query);
