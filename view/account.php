@@ -40,7 +40,7 @@
             <form action="note/save" method="post">
                 <input id="note_title" name="note_title" class="note_title" type="text" placeholder="Title" required/>
                 <textarea id="note_content" name="note_content" class="txtareasize"></textarea>
-                <input id="submit" type="submit" value="Save">
+                <input id="submit" style="margin-right:0px;" type="submit" value="Speichern">
             </form>
             <br>
         </div>
@@ -53,11 +53,11 @@
                     <input id="note_title" name="note_title" class="note_title" type="text" value="'.$note['name'].'" required/>
                     <textarea name="note_content" style="height:500px;">' . $note['content'] . '
                     </textarea>
-                    <input id="submit" type="submit" value="Save">
+                    <input id="submit" style="margin-right:0px;" type="submit" value="Speichern">
                 </form>
                 <form action="note/delete" method="post">
                     <input id="noteID" name="noteID" value="'.$note["noteID"].'" type="hidden"/>
-                    <input id="submit" type="submit" value="Delete">
+                    <input id="submit" style="float:left;display:inline;margin-top:-5px;" type="submit" value="Löschen">
                 </form>
             </div>
             ';

@@ -15,4 +15,4 @@ x Notiz löschen
 
 #NOTES
 
-- In die head jeder view php Datei, "<base href="/-K307/">" nach "<base href="/">" ändern nach entwicklung
+- In die head jeder view php Datei, "<base href="/-K307/">" nach "<base href="/">" ändern nach entwicklungphhäse
