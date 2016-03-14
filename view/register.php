@@ -17,7 +17,7 @@
       <input id="password" class="form_elements" type="password" name="password" required/><br>
       <label for="cpassword">Confirm password </label><br>
       <input id="cpassword" class="form_elements" type="password" name="cpassword" required/><br>
-      <input id="submit" type="submit" value="Submit">
+      <input id="submit" type="submit" value="Registrieren">
     </form>
   </div>
 </body>

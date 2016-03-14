@@ -15,7 +15,7 @@
       <input id="username" class="form_elements" type="text" name="username" required/><br>
       <label for="password">Password </label><br>
       <input id="password" class="form_elements" type="password" name="password" required/><br>
-      <input id="submit" type="submit" value="Log in">
+      <input id="submit" type="submit" value="Anmelden">
     </form>
   </div>
 </body>
