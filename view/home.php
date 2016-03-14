@@ -27,11 +27,12 @@
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-2 nopadding">
-                <h2 class="txt_center">About</h2>
+                <h2 class="txt_center">Swissnotes </h2>
             </div>
             <div class="col-md-2"></div>
         </div>
         <p>Beschreibung Hier</p>
+        <img class="scrn1" src="view/static/images/screenshot1.png">
     </div>
     <div class="col-md-2"></div>
 </div>

@@ -16,3 +16,11 @@ x Notiz löschen
 #NOTES
 
 - In die head jeder view php Datei, "<base href="/-K307/">" nach "<base href="/">" ändern nach entwicklungphhäse
+
+
+# Text ideen fürs homeseite
+
+Swiss Notes ist eine Website entwickelt, um Sie organisiert zu halten.
+Mit Swissnotes können Sie alle Ihre Notizen in der Cloud organisiert und jederzeit, überall Verfügbar.
+Swissnotes ist mit unserem schönen benutzerfreundliches Design einfach zu verwenden.
+Starten Sie mit swissnotes heute << registrieren Taste >>
