@@ -23,8 +23,8 @@ class UserController
 
                 Model::addUser($username, md5($password));
                 $_SESSION["userID"] = Model::getUserID($username);
-                $view = new View("login");
-                $view->display();
+                $_SESSION["notes"] = Model::getAllNotesFromUser(Model::getUserID($username));
+                header("Location: ../note/home");
             } else{
                 $view = new View('error');
                 $view->errorMsg = "Diesen user gibt es schon.";
