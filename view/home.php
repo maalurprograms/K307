@@ -32,7 +32,7 @@
         </div>
         <img class="center" src="view/static/images/book.png">
 
-        <p class="txt1">SwissNotes ist eine Website entwickelt um Sie organisiert zu halten.<br>
+        <p class="txt1 txt_center">SwissNotes ist eine Website entwickelt um Sie organisiert zu halten.<br>
             Mit SwissNotes können Sie alle Ihre Notizen in der Cloud jederzeit abrufen.<br>
             SwissNotes ist mit unserem schönen benutzerfreundliches Design einfach zu verwenden.<br>
             Starten Sie mit SwissNotes noch heute!</p>
