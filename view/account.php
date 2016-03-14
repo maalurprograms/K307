@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="view/static/bootstrap.min.css">
     <link rel="icon" type="image/png" href="view/static/images/favicon.png">
     <link rel="stylesheet" type="text/css" href="view/static/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
     <script src="view/account.js"></script>

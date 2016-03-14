@@ -8,7 +8,7 @@
     <!-- custom -->
     <link rel="stylesheet" type="text/css" href="view/static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="view/static/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>
@@ -40,12 +40,15 @@
         <div class="row">
             <div class="col-md-3 nopadding"></div>
             <div class="col-md-6 nopadding">
-                <a href="default/register"><h2 id="login" class="margin50">Jetzt Starten!</h2></a>
+                <a href="default/register"><h2 id="login" class="margin50 txt_center">Jetzt Starten!</h2></a>
             </div>
             <div class="col-md-3 nopadding"></div>
         </div>
         <p class="txt1">Screenshot:</p>
         <img class="scrn1 center" src="view/static/images/screenshot1.png">
+
+        <img class="block_inline" src="view/static/images/swissflag.jpg"><p class="txt1 block_inline"> Swiss Software</p>
+        <p class="txt1 txt_center"> Copyright &copy; SwissNotes - All Rights Reserved</p>
     </div>
     <div class="col-md-2"></div>
 </div>
