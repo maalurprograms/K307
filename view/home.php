@@ -27,15 +27,15 @@
     <div class="col-md-6">
         <div class="row">
             <div class="col-md-12 nopadding">
-                <h2 class="txt_center">Swissnotes erklärt</h2>
+                <h2 class="txt_center">SwissNotes erklärt</h2>
             </div>
         </div>
         <img class="center" src="view/static/images/book.png">
 
-        <p class="txt1">Swiss Notes ist eine Website entwickelt, um Sie organisiert zu halten.<br>
-            Mit Swissnotes können Sie alle Ihre Notizen in der Cloud organisiert und jederzeit, überall Verfügbar.<br>
-            Swissnotes ist mit unserem schönen benutzerfreundliches Design einfach zu verwenden.<br>
-            Starten Sie mit swissnotes heut!</p>
+        <p class="txt1">SwissNotes ist eine Website entwickelt um Sie organisiert zu halten.<br>
+            Mit SwissNotes können Sie alle Ihre Notizen in der Cloud jederzeit abrufen.<br>
+            SwissNotes ist mit unserem schönen benutzerfreundliches Design einfach zu verwenden.<br>
+            Starten Sie mit SwissNotes noch heute!</p>
 
         <div class="row">
             <div class="col-md-3 nopadding"></div>
