@@ -2,12 +2,17 @@ Design (HTML und CSS pages): maincolor: #33E8A6
 
 #TODO
 
-- Frontend fertig erstellen
+X Frontend fertig erstellen
 X Controllers erstellen
 X MVC implementieren
-- Bug (mit der Fehlermeldung fixen)
-- Sessions
+X Bug (mit der Fehlermeldung fixen)
+X Sessions
 - Passwort verschlüsseln
+- Benutzer löschen
+- Notiz löschen
+- Doku fertig erstellen
+- Presentation vorbereiten
+- Swissnotes Testen
 
 #NOTES
 
