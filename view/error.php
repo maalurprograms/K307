@@ -16,8 +16,8 @@
         <div class="col-md-1"></div>
         <div class="col-md-7"><h1><b>SwissNotes</b></h1></div>
         <div class="col-md-3 padding20">
-            <a href="default/login"><button id="login">Log in</button></a>
-            <a href="default/register"><button id="login">Register</button></a>
+            <a href="default/login"><button class="login">Log in</button></a>
+            <a href="default/register"><button class="login">Register</button></a>
         </div>
         <div class="col-md-1"></div>
     </div>
