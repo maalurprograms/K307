@@ -25,13 +25,6 @@
 <div class="row">
     <div class="col-md-2"></div>
     <div id="account_nav" class="col-md-2">
-        <?php
-
-        if(!isset($_SESSION["userID"])){
-            print "Keine session du huere hacker";
-        }
-
-        ?>
         <ul class="ac_nav_li">
             <li id="0"> + New Note</li>
             <?php
@@ -56,11 +49,15 @@
             print '
             <div id="'.$note["noteID"].'">
                 <form action="note/edit" method="post">
-                    <input name="noteID" value="'.$note["noteID"].'" style="display:none;"/>
+                    <input name="noteID" value="'.$note["noteID"].'" type="hidden"/>
                     <input id="note_title" name="note_title" class="note_title" type="text" value="'.$note['name'].'" required/>
                     <textarea name="note_content" style="height:500px;">' . $note['content'] . '
                     </textarea>
                     <input id="submit" type="submit" value="Save">
+                </form>
+                <form action="note/delete" method="post">
+                    <input id="noteID" name="noteID" value="'.$note["noteID"].'" type="hidden"/>
+                    <input id="submit" type="submit" value="Delete">
                 </form>
             </div>
             ';
