@@ -10,27 +10,21 @@ class DefaultController
      */
     public function home()
     {
-        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
-        //   "default_index" rendern. Wie das genau funktioniert, ist in der
-        //   View Klasse beschrieben.
+        // Render homepage
         $view = new View('home');
         $view->display();
     }
 
     public function login()
     {
-        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
-        //   "default_index" rendern. Wie das genau funktioniert, ist in der
-        //   View Klasse beschrieben.
+        // Render login page
         $view = new View('login');
         $view->display();
     }
 
     public function register()
     {
-        // In diesem Fall möchten wir dem Benutzer die View mit dem Namen
-        //   "default_index" rendern. Wie das genau funktioniert, ist in der
-        //   View Klasse beschrieben.
+        // Render register page
         $view = new View('register');
         $view->display();
     }

@@ -8,6 +8,7 @@
  */
 class NoteController
 {
+    // Insert a new note into the DB and render the account page
     public function save(){
         session_start();
         Model::addNote($_POST["note_title"], $_POST["note_content"], $_SESSION["userID"]);
@@ -17,6 +18,7 @@ class NoteController
         $view->display();
     }
 
+    // Update a note already in the DB and render the account page
     public function edit(){
         session_start();
         Model::editNote($_POST["note_title"], $_POST["note_content"], $_POST["noteID"]);
@@ -26,6 +28,7 @@ class NoteController
         $view->display();
     }
 
+    // Delete a note from the DB and render the account page
     public function delete(){
         session_start();
         Model::deleteNote($_POST["noteID"]);
@@ -35,6 +38,7 @@ class NoteController
         $view->display();
     }
 
+    // Render the account page if logged in, else render the error page
     public  function home(){
         session_start();
         if(!isset($_SESSION["userID"])){

@@ -7,7 +7,7 @@ require_once 'lib/Model.php';
  */
 class UserController
 {
-
+    // Register and insert a new user into the database
     public function register()
     {
         session_start();
@@ -35,19 +35,9 @@ class UserController
             $view->errorMsg = "Die Passwörter stimmen nicht überein.";
             $view->display();
         }
-
-        // Anfrage an die URI /user weiterleiten (HTTP 302)
-        // header('Location: /user');
     }
 
-//    public function delete()
-//    {
-//        Model::deleteUser($_GET['username']);
-//
-//        // Anfrage an die URI /user weiterleiten (HTTP 302)
-//        // header('Location: /user');
-//    }
-
+    // Login a user, initialize a new session. On error render the error page
     public function login()
     {
         session_start();
@@ -69,6 +59,7 @@ class UserController
         }
     }
 
+    // Logout a user and destroy the session
     public function logout(){
         session_start();
         session_destroy();
