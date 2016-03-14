@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="view/static/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script>
+    <script>tinymce.init({ language_url : 'view/de.js', language: 'de', selector:'textarea' });</script>
     <script src="view/account.js"></script>
 </head>
 <body>
