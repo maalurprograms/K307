@@ -12,7 +12,7 @@
     <h2>Register</h2>
     <form id="register_form" action="user/register" method="post">
       <label for="username">Userame </label><br>
-      <input id="username" class="form_elements" type="text" name="name" required/><br>
+      <input id="username" class="form_elements" type="text" name="username" required/><br>
       <label for="password">Password </label><br>
       <input id="password" class="form_elements" type="password" name="password" required/><br>
       <label for="cpassword">Confirm password </label><br>

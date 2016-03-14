@@ -12,20 +12,27 @@ class UserController
     {
         session_start();
         if ( $_POST['password']==$_POST['cpassword']) {
-            if(!(count(Model::getUser(Model::getUserID($_POST["name"])))> 0)) {
-                $username = $_POST['name'];
+            try{
+                $numbUser = count(Model::getUser(Model::getUserID($_POST["username"])));
+            } catch(Exception $e){
+                $numbUser = 0;
+            }
+            if($numbUser == 0) {
+                $username = $_POST['username'];
                 $password = $_POST['password'];
 
-                Model::addUser($username, $password);
+                Model::addUser($username, md5($password));
                 $_SESSION["userID"] = Model::getUserID($username);
                 $view = new View("login");
                 $view->display();
             } else{
-                print "Diesen user gibt es schon.";
+                $view = new View('error');
+                $view->errorMsg = "Diesen user gibt es schon.";
+                $view->display();
             }
         } else{
             $view = new View('error');
-            $view->errorMsg = "Die Passwérter stimmen nicht èberein.";
+            $view->errorMsg = "Die Passwörter stimmen nicht überein.";
             $view->display();
         }
 
@@ -47,7 +54,7 @@ class UserController
         $username = $_POST['username'];
         $password = $_POST['password'];
         $user = Model::getUser(Model::getUserID($username));
-        if ($user["password"] == $password && $password != "")
+        if ($user["password"] == md5($password) && $password != "")
         {
             // Start session and redirect to account
             $_SESSION["userID"] = Model::getUserID($username);
