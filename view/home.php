@@ -40,9 +40,9 @@
             <div class="col-md-3 nopadding"></div>
         </div>
         <p class="txt1">Screenshot:</p>
-        <img class="scrn1 center" src="view/static/images/Info.png">
+        <img class="scrn1 center" src="view/static/images/Info.png" alt="Infobild">
 
-        <img class="block_inline" src="view/static/images/swissflag.jpg"><p class="txt1 block_inline"> Swiss Software</p>
+        <img class="block_inline" src="view/static/images/swissflag.jpg" alt="Schweizer Logo"><p class="txt1 block_inline"> Swiss Software</p>
         <p class="txt1 txt_center"> Copyright &copy; SwissNotes - All Rights Reserved</p>
     </div>
     <div class="col-md-2"></div>

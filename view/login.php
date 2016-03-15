@@ -7,7 +7,7 @@
 </head>
 <body>
   <div id="form_container">
-  <img id="icon" src="view/static/images/icon.png" />
+  <img id="icon" src="view/static/images/login.png" alt="Anmelden"/>
     <h2>Anmelden</h2>
     <form id="login_form" action="user/login" method="post">
       <label for="username">Benutzername</label><br>
