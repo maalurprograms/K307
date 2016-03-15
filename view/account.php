@@ -3,7 +3,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <title>SwissNotes - Account</title>
     <?php
-        print fread(fopen("view/header.html", "r"), filesize("view/header.html"));
+        print fread(fopen("view/head.html", "r"), filesize("view/head.html"));
     ?>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>tinymce.init({ language_url : 'view/de.js', language: 'de', selector:'textarea'});</script>

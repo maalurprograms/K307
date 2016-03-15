@@ -1,6 +1,7 @@
 /* No ugly link Styles! */
 a:link {
     text-decoration: none;
+    color: white;
 }
 
 a:visited {
@@ -9,6 +10,11 @@ a:visited {
 
 a:hover {
     text-decoration: none;
+    color: #4FC47A;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 a:active {
