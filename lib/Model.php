@@ -51,7 +51,7 @@ class Model
     public static function addUser($username, $password){
         $query = 'insert into users (username, password) VALUES (?, ?)';
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param("ss", $username,$password);
+        $statement->bind_param("ss", htmlspecialchars($username),htmlspecialchars($password));
         self::sendQuery($statement, false);
     }
 

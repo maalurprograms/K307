@@ -28,7 +28,7 @@
             <li id="0"> + Neue Notiz</li>
             <?php
             foreach($_SESSION["notes"] as $note) {
-                print '<li id="'.$note["noteID"].'">' . $note['name'] .'</li>';
+                print '<li id="'.$note["noteID"].'">' . htmlspecialchars($note['name']) .'</li>';
             }
             ?>
         </ul>
@@ -49,8 +49,8 @@
                 <div id="'.$note["noteID"].'">
                     <form action="note/edit" method="post">
                         <input name="noteID" value="'.$note["noteID"].'" type="hidden"/>
-                        <input id="note_title" name="note_title" class="note_title" type="text" value="'.$note['name'].'" required/>
-                        <textarea name="note_content" style="height:500px;">' . $note['content'] . '
+                        <input id="note_title" name="note_title" class="note_title" type="text" value="'.htmlspecialchars($note['name']).'" required/>
+                        <textarea name="note_content" style="height:500px;">' . htmlspecialchars($note['content']) . '
                         </textarea>
                         <input id="submit" style="margin-right:0px;" type="submit" value="Speichern">
                     </form>
