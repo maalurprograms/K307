@@ -4,7 +4,7 @@ SwissNotes
 About
 --------------
 
-SwissNtoes ist eine webseite für Notizen. Es ist ähnlich wie OneNote.. nur besser..
+SwissNotes ist eine webseite für Notizen. Es ist ähnlich wie OneNote.. nur besser..
 
 Deploy
 --------------
