@@ -1,3 +1,5 @@
+// German translation for tinyMCE Editor
+
 tinymce.addI18n('de',{
 "Cut": "Ausschneiden",
 "Heading 5": "\u00dcberschrift 5",
