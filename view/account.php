@@ -2,11 +2,9 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <title>SwissNotes - Account</title>
-    <base href="/-K307/">
-    <link rel="stylesheet" type="text/css" href="view/static/bootstrap.min.css">
-    <link rel="icon" type="image/png" href="view/static/images/favicon.png">
-    <link rel="stylesheet" type="text/css" href="view/static/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <?php
+        print fread(fopen("view/header.html", "r"), filesize("view/header.html"));
+    ?>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script>tinymce.init({ language_url : 'view/de.js', language: 'de', selector:'textarea'});</script>
     <script src="view/account.js"></script>

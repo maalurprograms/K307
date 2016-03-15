@@ -1,10 +1,9 @@
 <html>
 <head>
   <title>Registrieren</title>
-  <base href="/-K307/">
-  <link rel="icon" type="image/png" href="view/static/images/favicon.png">
-  <link rel="stylesheet" type="text/css" href="view/static/styles.css">
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <?php
+    print fread(fopen("view/header.html", "r"), filesize("view/header.html"));
+  ?>
 </head>
 <body>
   <div id="register_container">

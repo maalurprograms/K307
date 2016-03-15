@@ -1,15 +1,9 @@
 <html>
 <head>
     <title>SwissNotes</title>
-    <base href="/-K307/">
-    <link rel="icon" type="image/png" href="view/static/images/favicon.png">
-    <link rel="stylesheet" href="view/static/style.css"> <!-- Resource style -->
-
-    <!-- custom -->
-    <link rel="stylesheet" type="text/css" href="view/static/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="view/static/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-</head>
+    <?php
+        print fread(fopen("view/header.html", "r"), filesize("view/header.html"));
+    ?>
 <body>
 <header>
     <div class="row">
