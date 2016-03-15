@@ -56,7 +56,7 @@
                 </form>
                 <form action="note/delete" method="post">
                     <input id="noteID" name="noteID" value="'.$note["noteID"].'" type="hidden"/>
-                    <input id="submit" style="float:left;display:inline;margin-top:-5px;" type="submit" value="Löschen">
+                    <input id="submit" style="float:left;display:inline;" type="submit" value="Löschen">
                 </form>
             </div>
             ';
