@@ -18,7 +18,7 @@
 </header>
 
 <div id="error_container">
-    <img id="error_icon" src="view/static/images/error.png" />
+    <img id="error_icon" src="view/static/images/error.png" alt="Fehler" />
     <?php
     print $this->errorMsg;
     ?>
