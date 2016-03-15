@@ -44,23 +44,23 @@
             <br>
         </div>
         <?php
-        foreach($_SESSION["notes"] as $note) {
-            print '
-            <div id="'.$note["noteID"].'">
-                <form action="note/edit" method="post">
-                    <input name="noteID" value="'.$note["noteID"].'" type="hidden"/>
-                    <input id="note_title" name="note_title" class="note_title" type="text" value="'.$note['name'].'" required/>
-                    <textarea name="note_content" style="height:500px;">' . $note['content'] . '
-                    </textarea>
-                    <input id="submit" style="margin-right:0px;" type="submit" value="Speichern">
-                </form>
-                <form action="note/delete" method="post">
-                    <input id="noteID" name="noteID" value="'.$note["noteID"].'" type="hidden"/>
-                    <input id="submit" style="float:left;display:inline;" type="submit" value="Löschen">
-                </form>
-            </div>
-            ';
-        }
+            foreach($_SESSION["notes"] as $note) {
+                print '
+                <div id="'.$note["noteID"].'">
+                    <form action="note/edit" method="post">
+                        <input name="noteID" value="'.$note["noteID"].'" type="hidden"/>
+                        <input id="note_title" name="note_title" class="note_title" type="text" value="'.$note['name'].'" required/>
+                        <textarea name="note_content" style="height:500px;">' . $note['content'] . '
+                        </textarea>
+                        <input id="submit" style="margin-right:0px;" type="submit" value="Speichern">
+                    </form>
+                    <form action="note/delete" method="post">
+                        <input id="noteID" name="noteID" value="'.$note["noteID"].'" type="hidden"/>
+                        <input id="submit" style="float:left;display:inline;" type="submit" value="Löschen">
+                    </form>
+                </div>
+                ';
+            }
         ?>
     </div>
     <div class="col-md-2"></div>
