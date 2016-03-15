@@ -18,7 +18,7 @@
                 <h2 class="txt_center">SwissNotes erklärt</h2>
             </div>
         </div>
-        <img class="center" src="view/static/images/book.png">
+        <img class="center" src="view/static/images/book.png" alt="Infotext">
 
         <p class="txt1 txt_center">SwissNotes ist eine Website entwickelt um Sie organisiert zu halten.<br>
             Mit SwissNotes können Sie alle Ihre Notizen in der Cloud jederzeit abrufen.<br>
@@ -33,7 +33,7 @@
             <div class="col-md-3 nopadding"></div>
         </div>
         <p class="txt1">Screenshot:</p>
-        <img class="scrn1 center" src="view/static/images/Info.png" alt="Infobild">
+        <img class="scrn1 center" src="view/static/images/Info.png" alt="Beispiel Account">
 
         <img class="block_inline" src="view/static/images/swissflag.jpg" alt="Schweizer Logo"><p class="txt1 block_inline"> Swiss Software</p>
         <p class="txt1 txt_center"> Copyright &copy; SwissNotes - All Rights Reserved</p>
