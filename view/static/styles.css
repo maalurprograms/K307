@@ -61,10 +61,11 @@ body {
 
 #register_container {
   width:300px;
-	height:auto;
-	margin:auto auto;
-  padding-top:30px;
-  padding-bottom: 30px;
+    height:448px;
+    left:50%;
+    top:50%;
+    margin:-224px 0 0 -150px;
+    position:absolute;
   border-radius: 4px;
 }
 
